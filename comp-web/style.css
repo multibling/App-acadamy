@@ -1,0 +1,43 @@
+h1 {
+    color: #2296c7;
+    font-size: 40px;
+    font-family: Times New Roman;
+    text-align: center;
+}
+
+h2 {
+    color: green;
+    font-family: Helvetica, sans-serif;
+    text-align: right;
+}
+
+h3 {
+    font-family:
+        Segoe UI,
+        sans-serif;
+}
+
+p {
+    font-weight: 400;
+    text-decoration: none;
+}
+
+ul {
+    list-style-image: url("images/pointer-icon.png");
+}
+
+ol {
+    list-style-type: upper-roman;
+}
+
+#menu-bar a {
+    text-decoration: none;
+    background-color: aquamarine;
+    font-family: Helvetica;
+    padding: 5px;
+}
+
+#menu-bar a:hover {
+    background-color: aqua;
+    color: #ffffff;
+}

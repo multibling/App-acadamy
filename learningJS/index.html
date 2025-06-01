@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    
+  </head>
+
+  <body>
+    <h1 id="heading1"></h1>
+    <p id="para1"></p>
+    <p id="para2"></p>
+    
+    
+    <script>
+    // declaring a variable
+    var text1;
+    var text2;
+    var text3;
+
+    // declaring and creating number variable in one line
+    var numA = 7;
+    var numB = 10;
+
+    // creating a variable
+    text1 = "Hello everyone on planet Earth";
+    text2 = "I love learning JS";
+    text3 = " JS is awesome!";
+
+    // applying the variable 
+    document.getElementById("heading1").innerHTML = (text1);
+    document.getElementById("para1").innerHTML = (text2 + text3);
+    // Using string and numbers together
+    document.getElementById("para2").innerHTML = ("The answer is: " numA * numB);
+    // document.getElementById("para2").innerHTML = (numA + " x " + numB + " = " + numA);
+
+    </script>
+  </body>
+
+</html>

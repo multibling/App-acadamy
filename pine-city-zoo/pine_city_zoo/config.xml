@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<widget
+
+  xmlns="http://www.w3.org/ns/widgets"
+  id="com.Lehlohonolo.zooapp"
+  versionCode = "1"
+  version="1.0.0">
+
+  <name>Pine City Zoo</name>
+
+  <description>Animals and Places to visit in Pine City Zoo App</description>
+
+  <author href="https://itvarcity.org" email="moenyanee@proton.me">
+    Lehlohonolo Moenyane
+  </author>
+
+  <content src="index.html" />
+
+  <preference name = "orientation" value = "portrait" />
+
+</widget>
