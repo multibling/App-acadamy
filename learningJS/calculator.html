@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <title>Calculator</title>
+  </head>
+
+  <body>
+    <!-- Table start here, outter layer of calc -->
+    <table border="1">
+      <!-- first column here -->
+      <tr>
+        <td colspan="4">
+          <input type="text" id="inputBox" value="0" />
+        </td>
+      </tr>
+
+      <tr>
+        <td class="digitButton" onclick="digitBtnPressed(7)">7</td>
+        <td class="digitButton" onclick="digitBtnPressed(8)">8</td>
+        <td class="digitButton" onclick="digitBtnPressed(9)">9</td>
+        <td class="operatorButton" onclick="operatorBtnPressed('x')">x</td>
+      </tr>
+
+      <tr>
+        <td class="digitButton" onclick="digitBtnPressed(4)">4</td>
+        <td class="digitButton" onclick="digitBtnPressed(5)">5</td>
+        <td class="digitButton" onclick="digitBtnPressed(6)">6</td>
+        <td class="operatorButton" onclick="operatorBtnPressed('-')">-</td>
+      </tr>
+
+      <tr>
+        <td class="digitButton" onclick="digitBtnPressed(1)">1</td>
+        <td class="digitButton" onclick="digitBtnPressed(2)">2</td>
+        <td class="digitButton" onclick="digitBtnPressed(3)">3</td>
+        <td class="operatorButton" onclick="operatorBtnPressed('+')">+</td>
+      </tr>
+
+      <tr>
+        <td class="digitButton" colspan="2" onclick="digitBtnPressed(0)">0</td>
+        <td class="ACButton" onclick="btnACPressed()">AC</td>
+        <td class="operatorButton" onclick="operatorBtnPressed('/')">/</td>
+      </tr>
+
+      <!-- last column here -->
+      <tr>
+        <td class="operatorButton" colspan="4" onclick="equalsBtnPressed()">
+          =
+        </td>
+      </tr>
+    </table>
+
+    <!-- this is where your javascript code go -->
+    <script>
+      //
+      // global boolean variable. Determines if the next thing the user type should be on a new line
+      var newLine = true;
+      var value1;
+      var currentOperator;
+      //
+      // Event handler for whe any digit butoon is pressed
+      function digitBtnPressed(button) {
+        //
+        if (newLine) {
+          // full hand :if (newLine == true)
+          //
+          document.getElementById("inputBox").value = button;
+          newLine = false;
+        } else {
+          //
+          // to store the current value pressed in inputBox
+          var currentValue = document.getElementById("inputBox").value;
+          // result after button pressed
+          document.getElementById("inputBox").value = currentValue + button;
+        }
+      }
+      //
+      // Event handler for whe any AC button is pressed
+      function btnACPressed() {
+        //
+        document.getElementById("inputBox").value = 0;
+        newLine = false;
+        //
+      }
+      //
+      // Event handler for when any operator button is pressed
+      function operatorBtnPressed(operator) {
+        currentOperator = operator;
+        value1 = parseInt(document.getElementById("inputBox").value);
+        //
+        newLine = true; // resetting the value
+      }
+      //
+      // Event handler for the equals button is pressed
+      function equalsBtnPressed() {
+        var value2 = parseInt(document.getElementById("inputBox").value);
+        // final operation after verything is done
+        var finalTotal;
+
+        switch (currentOperator) {
+          case "+":
+            finalTotal = value1 + value2;
+            break;
+          //
+          case "-":
+            finalTotal = value1 - value2;
+            break;
+          //
+          case "/":
+            finalTotal = value1 / value2;
+            break;
+          //
+          case "x":
+            finalTotal = value1 * value2;
+            break;
+        }
+        document.getElementById("inputBox").value = finalTotal;
+
+        value1 = 0;
+        newLine = true;
+      }
+    </script>
+  </body>
+</html>
