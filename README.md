@@ -14,9 +14,12 @@ understand but i need more to chew on.
 
 ### Week-2
 
+The *Superhero* app is we did for the week ... 
 
 #### Concluded
 
+CSS is not bad but i feel like it is a bit tricky mostle on the naming and meturements
+of it all.  For me to see the light i have to get the understanding of those.
 
 
 ### Week-3
